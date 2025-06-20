@@ -12,7 +12,7 @@ model.fit(X_train, y_train)
 st.title("Exam score Predictor")
 st.write("Enter hors studied to predict the exam score.")
 #user input
-hours=st_number_input("Hours Studied:",min_value=0.0, step=0.1)
+hours=st.number_input("Hours Studied:",min_value=0.0, step=0.1)
 #Predict Button
 if st.button("Predict Score"):
     predicted_score=model.predict([[hours]])[0]
